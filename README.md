@@ -163,6 +163,7 @@ Label-Conditioned-Robot-Vision/
 ├── data/                                  # Would be created automatically as the jupyter notebook is run
 ├── outputs/                               # Would be created automatically as the jupyter notebook is run
 ├── Label-Conditioned-Robot-Vision.ipynb   # The main jupyter notebook (standalone; end-to-end)
+├── Label-Conditioned-Robot-Vision.pdf     # The main notebook pdf (standalone; end-to-end)
 ├── Evaluation (FID&IS).pdf                # for Authors' execution
 ├── requirements.txt
 ├── LICENSE
@@ -179,7 +180,9 @@ source venv/bin/activate        # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-Open **Label-Conditioned-Robot-Vision.ipynb** and run cells in order.
+Open **Label-Conditioned-Robot-Vision.ipynb**, and run cells in order.
+or
+for **Label-Conditioned-Robot-Vision.pdf** to view author's execution.
 
 ---
 
