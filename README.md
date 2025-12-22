@@ -65,9 +65,9 @@ representing the probability that image $x$ is real **and** consistent with labe
 Training follows a **conditional GAN (cGAN)** objective:
 
 $$
-\min_G \max_D \; \mathbb{E}_{(x,y)\sim p_{\text{data}}}
+\min_G \max_D  \mathbb{E}_{(x,y)\sim p_{\text{data}}}
 \big[\log D(x,y)\big]
-\;+\;
++
 \mathbb{E}_{z\sim p(z),\, y\sim p(y)}
 \big[\log\big(1 - D(G(z,y), y)\big)\big]
 $$
