@@ -64,7 +64,7 @@ representing the probability that image $x$ is real **and** consistent with labe
 
 Training follows a **conditional GAN (cGAN)** objective:
 
-$\min_G \max_D \; \mathbb{E}_{x,y \sim p_{data}}[\log D(x, y)] + \mathbb{E}_{z \sim p(z), y \sim p(y)}[\log(1 - D(G(z,y), y))]$
+$\min_G \max_D \; \mathbb{E}_{x,y\sim p_{\text{data}}}[\log D(x,y)] + \mathbb{E}_{z\sim p(z),\,y\sim p(y)}[\log(1 - D(G(z,y),y))]$
 
 - The **Discriminator** maximizes its ability to distinguish real from generated samples under semantic conditioning.
 - The **Generator** minimizes this objective by producing samples that are indistinguishable from real observations *given the same label*.
