@@ -44,30 +44,27 @@ This project formulates label-conditioned robot vision as a **conditional genera
 ### Problem Formulation
 
 Let:
-- $ z \sim \mathcal{N}(0, I) $ be a latent noise vector,
-- $ y \in \{0,1\}^K $ be a one-hot encoded semantic label over $K$ classes,
-- $ x \in \mathbb{R}^{C \times H \times W} $ be a visual observation (image).
+- $z \sim \mathcal{N}(0, I)$ be a latent noise vector,
+- $y \in \{0,1\}^K$ be a one-hot encoded semantic label over $K$ classes,
+- $x \in \mathbb{R}^{C \times H \times W}$ be a visual observation (image).
 
 The generator learns a mapping:
-$$
-G(z, y) \rightarrow \hat{x}
-$$
-where $ \hat{x} $ is a synthetic image conditioned on the semantic prior $y$.
+
+$G(z, y) \rightarrow \hat{x}$
+
+where $\hat{x}$ is a synthetic image conditioned on the semantic prior $y$.
 
 The discriminator evaluates:
-$$
-D(x, y) \rightarrow [0,1]
-$$
+
+$D(x, y) \rightarrow [0,1]$
+
 representing the probability that image $x$ is real **and** consistent with label $y$.
 
 ### Conditional Adversarial Objective
 
 Training follows a **conditional GAN (cGAN)** objective:
 
-$$
-\min_G \max_D \; \mathbb{E}_{x,y \sim p_{data}}[\log D(x, y)] 
-+ \mathbb{E}_{z \sim p(z), y \sim p(y)}[\log(1 - D(G(z,y), y))]
-$$
+$\min_G \max_D \; \mathbb{E}_{x,y \sim p_{data}}[\log D(x, y)] + \mathbb{E}_{z \sim p(z), y \sim p(y)}[\log(1 - D(G(z,y), y))]$
 
 - The **Discriminator** maximizes its ability to distinguish real from generated samples under semantic conditioning.
 - The **Generator** minimizes this objective by producing samples that are indistinguishable from real observations *given the same label*.
