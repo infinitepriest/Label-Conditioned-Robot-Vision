@@ -221,7 +221,7 @@ https://github.com/Sushmaniresh
 - Label conditioning
 
 ### Ayushman Mishra  
-https://github.com/aymisxx  
+https://github.com/infinitepriest  
 - Architecture design
 - Training and evaluation
 - Robotics perspectivization
